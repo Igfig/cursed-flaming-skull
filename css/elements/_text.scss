@@ -1,0 +1,47 @@
+@use "../defaults";
+@use "../theme";
+
+p {
+	line-height: 1.5;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+
+	&:visited {
+		color: var(--text-color-link-visited);
+	}
+	&:hover, &:active {
+		color: var(--text-color-link-active);
+	}
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace), monospace;
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}

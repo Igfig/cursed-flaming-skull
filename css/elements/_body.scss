@@ -1,0 +1,17 @@
+@use "../defaults";
+@use "../theme";
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family), sans-serif;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em; // TODO widen this a lot
+}
