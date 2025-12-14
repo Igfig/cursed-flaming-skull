@@ -1,21 +1,9 @@
-/* Site title */
-.home-link {
-	flex-grow: 1;
-	//font-size: 1em; /* 16px /16 */
-	font-size: 2.6rem;
-	font-weight: 700;
-
-	&:link:not(:hover) {
-		text-decoration: none;
-	}
-}
-
 /* Nav */
 .nav {
 	display: flex;
 	gap: .5em 1em;
 	padding: 0;
-	margin: 0;
+	margin: 1.2rem 0 0.6rem;
 	list-style: none;
 }
 

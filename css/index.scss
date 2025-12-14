@@ -8,7 +8,9 @@
 @use "elements/text";
 
 @use "objects/hidden";
+@use "objects/spacer";
 
+@use "modules/site-header";
 @use "modules/nav";
 @use "modules/skip-link";
 @use "modules/links";

@@ -1,0 +1,70 @@
+/* Site title */
+
+header.site-header {
+	padding: 1em;
+	border-bottom: 1px dashed var(--color-gray-20);
+
+	background-image: url(/img/digby_transparent.png);
+	background-size: 29% auto;
+	background-position: center right;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+
+	hgroup {
+		margin: 0;
+		container-type: inline-size;
+	}
+}
+
+.site-title {
+	margin: 0;
+
+	a {
+		white-space: nowrap;
+		text-shadow: 0 0 10px black;
+
+		font-family: "Breathe Fire IV", serif;
+		font-size: 17.9cqw;
+		font-weight: 700;
+		font-variant: small-caps;
+
+		color: var(--title-color); // fallback for non-webkit browsers
+
+		-webkit-text-stroke: 1px var(--title-outline-color);
+		-webkit-text-fill-color: var(--title-color);
+
+		&[href], &:visited, &[href]:visited {
+			color: var(--text-color);
+		}
+
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover {
+			-webkit-text-stroke-color: white;
+			-webkit-text-fill-color: red;
+		}
+	}
+
+
+
+
+
+}
+
+.subtitle {
+	width: fit-content;
+	height: 2em; // to hide the extra line from the spacer element
+	margin: 0;
+
+	line-height: 1;
+	text-align: justify;
+
+	font-family: "Bardolatry", serif;
+	font-size: 5.9cqw;
+
+	// all small-caps just looks a little better than all caps for some reason
+	font-variant: small-caps;
+	text-transform: lowercase;
+}

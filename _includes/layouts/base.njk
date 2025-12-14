@@ -42,9 +42,14 @@
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-			<span>{{ metadata.description }}</span>
+		<header class="site-header">
+			<hgroup>
+				<h1 class="site-title"><a href="/">{{ metadata.title }}</a></h1>
+				<p role="doc-subtitle" class="subtitle">
+					{{ metadata.description | replace(", ", "\n") | nl2br | safe}}
+					<span class="spacer"/>
+				</p>
+			</hgroup>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
