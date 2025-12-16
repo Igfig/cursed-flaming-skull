@@ -5,15 +5,32 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--theme-color-white: #ded3d8;
+	--theme-color-lightest: #c9b7bf;
+	--theme-color-lighter: #9e8b93;
+	--theme-color-light: #907d85;
+	--theme-color: #746169;
+	--theme-color-dark: #5a474f;
+	--theme-color-darker: #4d3a42;
+	--theme-color-darkest: #29171f;
+	--theme-color-black: #1a0f14;
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--background-color: var(--theme-color-lightest);
+
+	--text-color: var(--theme-color-darkest);
+	--text-color-link: var(--theme-color-darker);
+	--text-color-link-active: var(--theme-color-black);
+	--text-color-link-visited: var(--text-color-link);
+
+	--heading-color: var(--theme-color-darker); // all one shade lighter than text
+	--heading-color-link: var(--theme-color-dark);
+	--heading-color-link-active: var(--theme-color-darkest);
+	--heading-color-link-visited: var(--heading-color-link);
 
 	--title-color: #d10000;
+	--title-hover-color: #ff0000;
 	--title-outline-color: var(--color-gray-20);
+	--title-hover-outline-color: white;
 
 	--syntax-tab-size: 2;
 }
@@ -21,14 +38,20 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-gray-20: #e0e0e0;
+		--color-gray-30: #dad8d8;
 		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
+		--color-gray-90: #C0C0C0; // XXX yeah I don't get this
 
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		--background-color: var(--theme-color-darkest);
 
-		--background-color: #15202b;
+		--text-color: var(--theme-color-lightest);
+		--text-color-link: var(--theme-color-white);
+		--text-color-link-active: var(--theme-color-lighter);
+		--text-color-link-visited: var(--text-color-link);
+
+		--heading-color: var(--theme-color-lighter); // all one shade darker than text
+		--heading-color-link: var(--theme-color-lightest);
+		--heading-color-link-active: var(--theme-light);
+		--heading-color-link-visited: var(--heading-color-link);
 	}
 }
