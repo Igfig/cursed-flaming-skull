@@ -1,56 +1,47 @@
 /* Site title */
 
 header.site-header {
+	container-type: inline-size;
+
+	margin: 0;
 	padding: 1em;
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px solid var(--heading-color);
 
 	background-image: url(/img/digby_transparent.png);
 	background-size: 29% auto;
 	background-position: center right;
 	background-origin: content-box;
 	background-repeat: no-repeat;
-
-	hgroup {
-		margin: 0;
-		container-type: inline-size;
-	}
 }
 
 .site-title {
 	margin: 0;
 
-	a {
-		white-space: nowrap;
-		text-shadow: 0 0 10px black;
+	white-space: nowrap;
+	text-shadow: 0 0 10px black;
 
-		font-family: "Breathe Fire IV", serif;
-		font-size: 17.9cqw;
-		font-weight: 700;
-		font-variant: small-caps;
+	font-family: "Breathe Fire IV", serif;
+	font-size: 17.9cqw;
+	font-weight: 700;
+	font-variant: small-caps;
 
-		color: var(--title-color); // fallback for non-webkit browsers
+	color: var(--title-color); // fallback for non-webkit browsers
 
-		-webkit-text-stroke: 1px var(--title-outline-color);
-		-webkit-text-fill-color: var(--title-color);
+	-webkit-text-stroke: 1px var(--title-outline-color);
+	-webkit-text-fill-color: var(--title-color);
 
-		&[href], &:visited, &[href]:visited {
-			color: var(--text-color);
-		}
-
-		&:link {
-			text-decoration: none;
-		}
-
-		&:hover {
-			-webkit-text-stroke-color: white;
-			-webkit-text-fill-color: red;
-		}
+	&[href], &:visited, &[href]:visited {
+		color: var(--text-color);
 	}
 
+	&:link {
+		text-decoration: none;
+	}
 
-
-
-
+	&:hover {
+		-webkit-text-stroke-color: var(--title-hover-outline-color);
+		-webkit-text-fill-color: var(--title-hover-color);
+	}
 }
 
 .subtitle {
@@ -60,6 +51,7 @@ header.site-header {
 
 	line-height: 1;
 	text-align: justify;
+	color: var(--heading-color);
 
 	font-family: "Bardolatry", serif;
 	font-size: 5.9cqw;
