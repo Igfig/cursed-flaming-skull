@@ -46,14 +46,14 @@
 			<h2 class="visually-hidden">Site header</h2>
 			<a href="/" class="site-title">{{ metadata.title }}</a>
 			<p class="subtitle">
-				{{ metadata.description | replace(", ", "\n") | nl2br | safe}}
+				born to be a flaming skeleton<br/>cursed to be a flaming skull
 				<span class="spacer"></span>
 			</p>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
+			<nav class="nav">
 				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
+				<ul>
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}

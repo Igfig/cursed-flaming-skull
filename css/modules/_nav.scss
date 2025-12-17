@@ -1,16 +1,27 @@
 /* Nav */
+
+$nav-link-padding: 0.5em;
+
 .nav {
-	display: flex;
-	gap: .5em 1em;
-	padding: 0;
-	margin: 1rem 0 0.6rem;
-	list-style: none;
+	margin: 1rem 0 0;
+
+	ul {
+		display: flex;
+		gap: .5em 1em;
+		margin: 0 0 0 0-$nav-link-padding; // make up for side padding on nav items
+		padding: 0;
+		list-style: none;
+	}
 }
 
 .nav-item {
 	display: inline-block;
+	line-height: 1.75; // make the leading trim match that of the larger text above and below
 
 	a[href] {
+		display: block;
+		padding: 0 $nav-link-padding;
+
 		&:not(:hover) {
 			text-decoration: none;
 		}
