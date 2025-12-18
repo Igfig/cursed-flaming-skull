@@ -1,17 +1,19 @@
+@use "../theme";
+@use "../mixins";
+
 /* Posts list */
 
 .postlist {
-	counter-reset: start-from var(--postlist-index);
 	list-style: none;
 	margin: -1rem -1rem 2rem; // to fill full width of <main>
 	padding: 0;
 }
 
 .postlist-item {
-	counter-increment: start-from -1;
 	padding: 2rem 1rem;
 	margin: 0;
-	border-bottom: 1px solid var(--heading-color);
+	@include mixins.divider;
+
 	line-height: 2;
 	word-spacing: 2px;
 }

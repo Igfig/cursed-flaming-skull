@@ -1,3 +1,6 @@
+@use "../theme";
+@use "../mixins";
+
 /* Site title */
 
 header.site-header {
@@ -5,7 +8,7 @@ header.site-header {
 
 	margin: 0;
 	padding: 2rem 1rem;
-	border-bottom: 1px solid var(--heading-color);
+	@include mixins.divider;
 
 	background-image: url(/img/digby_transparent.png);
 	background-size: 29% auto;

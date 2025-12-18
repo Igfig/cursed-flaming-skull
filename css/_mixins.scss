@@ -1,0 +1,5 @@
+@use "./theme";
+
+@mixin divider {
+	border-bottom: 3px double var(--divider-color);
+}

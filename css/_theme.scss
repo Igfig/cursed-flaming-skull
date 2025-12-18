@@ -32,6 +32,8 @@
 	--title-outline-color: var(--color-gray-20);
 	--title-hover-outline-color: white;
 
+	--divider-color: var(--theme-color-dark);
+
 	--syntax-tab-size: 2;
 }
 
@@ -53,5 +55,7 @@
 		--heading-color-link: var(--theme-color-lightest);
 		--heading-color-link-active: var(--theme-color-white);
 		--heading-color-link-visited: var(--heading-color-link);
+
+		--divider-color: var(--theme-color-light);
 	}
 }
