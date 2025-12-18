@@ -13,9 +13,10 @@ li {
 	line-height: 1.5;
 }
 
-a[href] {
-	color: var(--text-color-link);
-
+a {
+	&, &:link {
+		color: var(--text-color-link);
+	}
 	&:visited {
 		color: var(--text-color-link-visited);
 	}
@@ -27,9 +28,10 @@ a[href] {
 h1, h2, h3 {
 	color: var(--heading-color);
 
-	a[href] {
-		color: var(--heading-color-link);
-
+	a {
+		&, &:link {
+			color: var(--heading-color-link);
+		}
 		&:visited {
 			color: var(--heading-color-link-visited);
 		}
