@@ -12,6 +12,8 @@
 	padding: 2rem 1rem;
 	margin: 0;
 	border-bottom: 1px solid var(--heading-color);
+	line-height: 2;
+	word-spacing: 2px;
 }
 
 .postlist-title {
@@ -21,9 +23,6 @@
 
 .postlist-link {
 	padding-right: .5em;
-	text-underline-position: from-font;
-	text-underline-offset: 0;
-	text-decoration-thickness: 1px;
 
 	.postlist-item-active & {
 		font-weight: bold;

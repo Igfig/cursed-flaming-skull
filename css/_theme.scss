@@ -17,13 +17,13 @@
 
 	--background-color: var(--theme-color-lightest);
 
-	--text-color: var(--theme-color-darkest);
-	--text-color-link: var(--theme-color-darker);
+	--text-color: var(--theme-color-darker);
+	--text-color-link: var(--theme-color-darkest);
 	--text-color-link-active: var(--theme-color-black);
 	--text-color-link-visited: var(--text-color-link);
 
-	--heading-color: var(--theme-color-darker); // all one shade lighter than text
-	--heading-color-link: var(--theme-color-dark);
+	--heading-color: var(--theme-color-darkest); // all one shade lighter than text
+	--heading-color-link: var(--theme-color-darkest);
 	--heading-color-link-active: var(--theme-color-darkest);
 	--heading-color-link-visited: var(--heading-color-link);
 
@@ -44,14 +44,14 @@
 
 		--background-color: var(--theme-color-darkest);
 
-		--text-color: var(--theme-color-lightest);
-		--text-color-link: var(--theme-color-white);
-		--text-color-link-active: var(--theme-color-lighter);
+		--text-color: var(--theme-color-lighter);
+		--text-color-link: var(--theme-color-lightest);
+		--text-color-link-active: var(--theme-color-white);
 		--text-color-link-visited: var(--text-color-link);
 
-		--heading-color: var(--theme-color-lighter); // all one shade darker than text
+		--heading-color: var(--theme-color-lightest); // all one shade darker than text
 		--heading-color-link: var(--theme-color-lightest);
-		--heading-color-link-active: var(--theme-light);
+		--heading-color-link-active: var(--theme-color-white);
 		--heading-color-link-visited: var(--heading-color-link);
 	}
 }

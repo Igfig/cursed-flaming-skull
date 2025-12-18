@@ -1,7 +1,30 @@
 /* Fonts */
 
+@font-face {
+	font-family: Lusitana;
+	src:
+		local(Lusitana),
+		url("public/font/Lusitana-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: Lusitana;
+	font-weight: bold;
+	src:
+		local(Lusitana),
+		url("public/font/Lusitana-Bold.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: Bellefair;
+	src:
+		local(Bellefair),
+		url("public/font/Bellefair-Regular.ttf") format("ttf");
+}
+
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: Lusitana, Garamond, serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-	--font-size: 16px; // default value, but we might want to change this depending on the font we use
+	--font-size: 22px;
+
+	--heading-font-family: Bellefair, serif;
 }

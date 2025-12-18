@@ -5,6 +5,11 @@ footer {
 	padding: 1rem;
 }
 
-main :first-child {
-	margin-top: 0;
+main {
+	line-height: 2;
+	word-spacing: 2px;
+
+	:first-child {
+		margin-top: 0;
+	}
 }

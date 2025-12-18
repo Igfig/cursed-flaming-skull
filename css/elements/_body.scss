@@ -5,14 +5,22 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family), sans-serif;
+
 	font-size: var(--font-size);
+	font-family: var(--font-family), serif;
+
 	color: var(--text-color);
 	background-color: var(--background-color);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-smooth: always;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 60rem; // 960px at 16px font size
+	max-width: 960px; // 60rem at 16px font size
 }
