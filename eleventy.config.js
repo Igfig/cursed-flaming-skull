@@ -6,6 +6,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import blogTools from "eleventy-plugin-blog-tools"
 import fontAwesomePlugin from "@11ty/font-awesome";
 
+import metadata from "./_data/metadata.js"
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -76,15 +77,7 @@ export default async function(eleventyConfig) {
 			name: "posts",
 			limit: 10,
 		},
-		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
-			author: {
-				name: "Your Name"
-			}
-		}
+		metadata
 	});
 
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
