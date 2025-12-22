@@ -49,6 +49,7 @@ header.site-header {
 	&:hover {
 		-webkit-text-stroke-color: var(--title-hover-outline-color);
 		-webkit-text-fill-color: var(--title-hover-color);
+		// unfortunately we don't seem to be able to put a transition on text stroke and fill
 	}
 
 	@media screen and (max-width: 480px) { // probably unnecessary, but shrug
