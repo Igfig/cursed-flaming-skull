@@ -1,12 +1,10 @@
-@use "../theme";
+@use "../mixins";
 
 main,
 footer {
-	padding: 1rem;
-}
+	@include mixins.body-padding;
 
-main {
-	line-height: 2;
+	line-height: 1.5;
 	word-spacing: 2px;
 
 	:first-child {

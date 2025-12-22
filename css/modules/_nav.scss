@@ -3,7 +3,7 @@
 $nav-link-padding: 0.5em;
 
 .nav {
-	margin: 1.6rem 0 0; // kinda eyeballed
+	margin: var(--spacing-vertical) 0 0;
 
 	ul {
 		display: flex;

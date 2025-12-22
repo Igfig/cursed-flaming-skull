@@ -1,5 +1,13 @@
 @use "./theme";
 
-@mixin divider {
-	border-bottom: 3px double var(--divider-color);
+@mixin underline-spacing {
+	padding-bottom: 3px; // account for how text-decoration: underline isn't included in the text box
+}
+
+@mixin textbox-trim {
+	text-box: trim-both cap alphabetic;
+}
+
+@mixin body-padding {
+	padding: var(--spacing-vertical) var(--spacing-horizontal);
 }

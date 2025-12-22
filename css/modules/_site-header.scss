@@ -4,14 +4,15 @@
 /* Site title */
 
 header.site-header {
+	position: relative;
 	container-type: inline-size;
 
 	margin: 0;
-	padding: 2rem 1rem;
-	@include mixins.divider;
+	@include mixins.body-padding;
+	border-bottom: var(--divider);
 
 	background-image: url(/img/digby_transparent.png);
-	background-size: 29% auto;
+	background-size: 28% auto;
 	background-position: center right;
 	background-origin: content-box;
 	background-repeat: no-repeat;
@@ -22,8 +23,11 @@ header.site-header {
 }
 
 .site-title {
+	@include mixins.textbox-trim;
 	display: block;
-	margin: 0;
+	position: relative;
+	z-index: 10;
+	padding: 0.03em 0; // capital letters are slightly taller than box
 
 	white-space: nowrap;
 	text-shadow: 0 0 10px black;
@@ -35,6 +39,7 @@ header.site-header {
 	font-variant: small-caps;
 
 	&, &:link, &:visited {
+		margin: 0;
 		color: var(--title-color); // fallback for non-webkit browsers
 
 		-webkit-text-stroke: 0.0001em var(--title-outline-color);
@@ -57,22 +62,21 @@ header.site-header {
 }
 
 .subtitle {
-	$line-height: 0.9;
+	$line-height: 1.2;
 
 	width: fit-content;
-	margin-top: -0.1em; // to even out the apparent spacing between lines TODO this looks wrong at smaller sizes actually
+	margin-top: var(--spacing-vertical);
 	margin-bottom: -#{$line-height}em;  // to hide the extra line from the spacer element
 
 	line-height: $line-height;
 	text-align: justify;
-	color: var(--heading-color);
+	color: var(--text-color);
 
 	font-family: "Bardolatry", serif;
-	font-size: max(5.9cqw, 24px);
+	font-size: max(calc(4.4cqw - 2px), 18px);
 
-	// all small-caps just looks a little better than all caps for some reason
-	font-variant: small-caps;
-	text-transform: lowercase;
+	text-transform: uppercase;
+	word-spacing: 3px;
 
 	@media screen and (max-width: 480px) {
 		font-size: max(8.4cqw, 36px);

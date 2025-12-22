@@ -1,7 +1,14 @@
 @use "../fonts";
 @use "../theme";
+@use "../mixins";
 
-p {
+p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, li, time {
+	@include mixins.textbox-trim;
+}
+
+p, h1, h2, h3, h4, h5, h6, blockquote {
+	margin: var(--spacing-vertical) 0;
+
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -22,12 +29,17 @@ a {
 }
 
 h1, h2, h3 {
-	font-family: Bellefair, serif; // unfortunately this font has weird stroke problems...
-	font-weight: normal;
-	-webkit-text-stroke-width: 0.2px; // fix Bellefair's weird stroke problems
-	line-height: 1.5;
+	font-family: Bellefair, serif; 		// unfortunately this font has weird stroke problems...
+	font-weight: normal; 							// which make it look terrible at bold weights
+	-webkit-text-stroke-width: 0.2px; // but we can simulate boldness with stroke width
+	line-height: 1.3;
 	color: var(--heading-color);
 
+	padding-top: 2px; // this font is a little taller than the text box
+
+	&:has(a) {
+		@include mixins.underline-spacing;
+	}
 	a {
 		&, &:link {
 			color: var(--heading-color-link);
@@ -45,20 +57,25 @@ pre,
 code {
 	font-family: var(--font-family-monospace), monospace;
 }
-pre:not([class*="language-"]) {
-	margin: .5em 0;
-	line-height: 1.375; /* 22px /16 */
-	tab-size: var(--syntax-tab-size);
-	-webkit-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	overflow-x: auto;
+
+pre {
+	margin: 2em 0;
+
+	&:not([class*="language-"]) {
+		line-height: 1.375; /* 22px /16 */
+		tab-size: var(--syntax-tab-size);
+		-webkit-hyphens: none;
+		-ms-hyphens: none;
+		hyphens: none;
+		direction: ltr;
+		text-align: left;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		overflow-x: auto;
+	}
 }
+
 code {
 	word-break: break-all;
 }

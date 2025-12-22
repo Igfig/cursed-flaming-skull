@@ -1,10 +1,17 @@
+@use "../theme";
+@use "../mixins";
+
 .links-nextprev {
 	display: flex;
 	justify-content: space-between;
 	gap: .5em 1em;
 	list-style: "";
-	border-top: 1px dashed var(--color-gray-20);
-	padding: 1em 0;
+
+	margin: var(--spacing-vertical)
+					calc(var(--spacing-horizontal) * -1) // to fill full width of <main>
+					calc(var(--spacing-vertical) * -1);  // end flush with <main>
+	@include mixins.body-padding;
+	border-top: var(--divider);
 
 	> * {
 		flex-grow: 1;
