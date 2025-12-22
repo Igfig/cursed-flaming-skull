@@ -15,6 +15,8 @@ p, h1, h2, h3, h4, h5, h6, blockquote {
 }
 
 a {
+	transition: 0.1s;
+
 	&, &:link {
 		text-underline-position: from-font;
 		text-decoration-thickness: 1px;
@@ -23,7 +25,10 @@ a {
 	&:visited {
 		color: var(--text-color-link-visited);
 	}
-	&:hover, &:active {
+	&:hover {
+		color: var(--text-color-link-hover);
+	}
+	&:active {
 		color: var(--text-color-link-active);
 	}
 }
@@ -47,7 +52,10 @@ h1, h2, h3 {
 		&:visited {
 			color: var(--heading-color-link-visited);
 		}
-		&:hover, &:active {
+		&:hover {
+			color: var(--heading-color-link-hover);
+		}
+		&:active {
 			color: var(--heading-color-link-active);
 		}
 	}

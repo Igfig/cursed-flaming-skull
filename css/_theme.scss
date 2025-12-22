@@ -1,10 +1,7 @@
 /* Theme colors */
 
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
-
+	--theme-color-whiter: #ece4e7;
 	--theme-color-white: #ded3d8;
 	--theme-color-lightest: #c9b7bf;
 	--theme-color-lighter: #9e8b93;
@@ -12,24 +9,27 @@
 	--theme-color: #746169;
 	--theme-color-dark: #604d55;
 	--theme-color-darker: #4d3a42;
-	--theme-color-darkest: #29171f;
-	--theme-color-black: #1a0f14;
+	--theme-color-darkest: #341e28;
+	--theme-color-black: #0c0709;
+	--theme-color-blacker: black;
 
 	--background-color: var(--theme-color-lightest);
 
 	--text-color: var(--theme-color-darker);
 	--text-color-link: var(--theme-color-darkest);
-	--text-color-link-active: var(--theme-color-black);
+	--text-color-link-hover: var(--theme-color-black);
+	--text-color-link-active: var(--theme-color-blacker);
 	--text-color-link-visited: var(--text-color-link);
 
 	--heading-color: var(--theme-color-darkest); // all one shade lighter than text
 	--heading-color-link: var(--theme-color-darkest);
-	--heading-color-link-active: var(--theme-color-darkest);
+	--heading-color-link-hover: var(--theme-color-black);
+	--heading-color-link-active: var(--theme-color-blacker);
 	--heading-color-link-visited: var(--heading-color-link);
 
 	--title-color: #d10000;
 	--title-hover-color: #ff0000;
-	--title-outline-color: var(--color-gray-20);
+	--title-outline-color: var(--theme-color-whiter);
 	--title-hover-outline-color: white;
 
 	--divider-color: var(--theme-color-dark);
@@ -43,21 +43,18 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-30: #dad8d8;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #C0C0C0; // XXX yeah I don't get this
-
 		--background-color: var(--theme-color-darkest);
 
 		--text-color: var(--theme-color-lighter);
 		--text-color-link: var(--theme-color-lightest);
-		--text-color-link-active: var(--theme-color-white);
+		--text-color-link-hover: var(--theme-color-white);
+		--text-color-link-active: var(--theme-color-whiter);
 		--text-color-link-visited: var(--text-color-link);
 
 		--heading-color: var(--theme-color-lightest); // all one shade darker than text
 		--heading-color-link: var(--theme-color-lightest);
-		--heading-color-link-active: var(--theme-color-white);
+		--heading-color-link-hover: var(--theme-color-white);
+		--heading-color-link-active: var(--theme-color-whiter);
 		--heading-color-link-visited: var(--heading-color-link);
 
 		--divider-color: var(--theme-color-light);
