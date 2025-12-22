@@ -5,7 +5,6 @@ img {
 	&[width][height] {
 		height: auto;
 	}
-
 	&[src$=".svg"] {
 		width: 100%;
 		height: auto;

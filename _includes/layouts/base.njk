@@ -36,6 +36,9 @@
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
+		{#	Add Fontawesome icons to bundle	#}
+		{% getBundle "fontawesome" %}
+
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 	</head>
@@ -54,9 +57,22 @@
 			<nav class="nav">
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul>
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
+					{%- for entry in collections.all | eleventyNavigation %}
+						<li class="nav-item">
+							<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+						</li>
+					{%- endfor %}
+					<li>
+						{# custom nav links for socials #}
+						<ul class="nav-socials">
+							<li class="nav-item">
+								<a href="/feed/feed.xml" target="_blank">{% icon "rss" %}</a></li>
+							<li class="nav-item">
+								<a href="https://bsky.app/profile/igfig.bsky.social" target="_blank">{% icon "fab:bluesky" %}</a></li>
+							<li class="nav-item">
+								<a href="https://x.com/Igfig" target="_blank">{% icon "fab:twitter" %}</a></li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 		</header>
