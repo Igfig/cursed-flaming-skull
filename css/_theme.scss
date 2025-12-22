@@ -35,7 +35,7 @@
 	--divider-color: var(--theme-color-dark);
 	--divider: 3px double var(--divider-color);
 
-	--spacing-vertical: 2rem;
+	--spacing-vertical: calc(2.3% + 1rem);
 	--spacing-horizontal: 1rem;
 
 	--syntax-tab-size: 2;

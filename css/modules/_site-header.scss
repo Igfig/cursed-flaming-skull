@@ -13,7 +13,7 @@ header.site-header {
 
 	background-image: url(/img/digby_transparent.png);
 	background-size: 28% auto;
-	background-position: center right;
+	background-position: top calc(20% - 20px) right;
 	background-origin: content-box;
 	background-repeat: no-repeat;
 
@@ -26,7 +26,9 @@ header.site-header {
 	@include mixins.textbox-trim;
 	display: block;
 	position: relative;
+
 	z-index: 10;
+	margin: 0;
 	padding: 0.03em 0; // capital letters are slightly taller than box
 
 	white-space: nowrap;
@@ -39,7 +41,6 @@ header.site-header {
 	font-variant: small-caps;
 
 	&, &:link, &:visited {
-		margin: 0;
 		color: var(--title-color); // fallback for non-webkit browsers
 
 		-webkit-text-stroke: 0.0001em var(--title-outline-color);
@@ -52,12 +53,14 @@ header.site-header {
 
 	@media screen and (max-width: 480px) { // probably unnecessary, but shrug
 		width: min-content;
-		white-space: wrap;
-		font-size: max(45cqw, 40px);
-		text-align: center;
-		align-self: center;
+
 		margin: 0 auto;
-		line-height: 0.6;
+		padding-bottom: 4cqw; // bottom of "k" in "skull"
+
+		line-height: 0.65;
+		white-space: wrap;
+		text-align: center;
+		font-size: max(45cqw, 40px);
 	}
 }
 
@@ -79,7 +82,12 @@ header.site-header {
 	word-spacing: 3px;
 
 	@media screen and (max-width: 480px) {
-		font-size: max(8.4cqw, 36px);
-		margin-top: 3.5rem;
+		font-size: max(9.4cqw, 1rem);
+		margin-bottom: 0;
+		text-align: center;
+
+		.spacer {
+			display: none;
+		}
 	}
 }

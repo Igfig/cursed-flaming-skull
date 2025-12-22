@@ -1,3 +1,5 @@
+@use "../mixins";
+
 /* Nav */
 
 $nav-link-padding: 0.5em;
@@ -8,7 +10,7 @@ $nav-link-padding: 0.5em;
 	ul {
 		display: flex;
 		flex-flow: row wrap;
-		gap: .5em 1em;
+		gap: var(--spacing-horizontal);
 		margin: 0 0 0 0-$nav-link-padding; // make up for side padding on nav items
 		padding: 0;
 		list-style: none;
@@ -19,9 +21,13 @@ $nav-link-padding: 0.5em;
 	display: inline-block;
 	line-height: 1.75; // make the leading trim match that of the larger text above and below
 
+
 	a[href] {
 		display: block;
-		padding: 0 $nav-link-padding;
+		margin: 0-$nav-link-padding 0;
+		padding: $nav-link-padding;
+
+		@include mixins.textbox-trim;
 
 		&:not(:hover) {
 			text-decoration-line: none;
