@@ -22,5 +22,7 @@ html {
 	overflow-y: scroll;
 }
 body {
+	position: relative;
+	container-type: inline-size;
 	max-width: 960px; // 60rem at 16px font size
 }
