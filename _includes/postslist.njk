@@ -12,6 +12,7 @@
 			</time>
 		</header>
 
+		{% touch post.templateContent %} {# this ensures that templateContent is loaded for the excerpt below. #}
 		<blockquote class="postlist-excerpt">{% excerpt post %}</blockquote>
 		<p class="postlist-read_more"><a href="{{ post.url }}">Read more</a></p>
 	</li>

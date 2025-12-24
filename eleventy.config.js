@@ -103,10 +103,14 @@ export default async function(eleventyConfig) {
 		// slugify: eleventyConfig.getFilter("slugify"),
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
-
+	
+	// shortcodes
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
 	});
+
+	// custom shortcodes
+	eleventyConfig.addShortcode("touch", () => ""); // used to ensure that post.templateContent gets loaded for the excerpt
 
 	// More plugins
 	eleventyConfig.addPlugin(blogTools);
