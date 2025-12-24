@@ -1,3 +1,4 @@
+@use "../theme";
 @use "../mixins";
 
 /* Tags */
@@ -12,7 +13,7 @@
 	}
 }
 
-/* Tags list */
+/* Post tags list */
 .post-metadata {
 	@include mixins.textbox-trim;
 	display: flex;
@@ -27,5 +28,21 @@
 
 	li {
 		display: inline-block;
+	}
+}
+
+/* List of all tags */
+.tags-list {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: inline-block;
+
+		&:not(:last-child)::after {
+			content: ",";
+		}
 	}
 }

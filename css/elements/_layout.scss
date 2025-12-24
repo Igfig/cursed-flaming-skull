@@ -13,6 +13,10 @@ footer {
 	}
 }
 
+main {
+	border-bottom: var(--divider);
+}
+
 footer {
 	font-size: var(--font-size-sm);
 }
