@@ -103,7 +103,7 @@ export default async function(eleventyConfig) {
 		// slugify: eleventyConfig.getFilter("slugify"),
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
-	
+
 	// shortcodes
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
