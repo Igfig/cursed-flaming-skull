@@ -18,8 +18,10 @@ const eleventyComputed = {
 		return `/tags/${this.slugify(data.tag)}/`;
 	}
 };
+// </script>
 ---
 <h1>Tagged “{{ tag }}”</h1>
+<hr/>
 
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}

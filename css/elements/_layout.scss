@@ -16,3 +16,9 @@ footer {
 footer {
 	font-size: var(--font-size-sm);
 }
+
+hr {
+	margin: var(--spacing-vertical) calc(var(--spacing-horizontal) * -1);
+	border: none;
+	border-bottom: var(--divider);
+}
