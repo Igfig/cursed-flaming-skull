@@ -21,6 +21,20 @@
 		url("public/font/Bellefair-Regular.ttf") format("ttf");
 }
 
+@font-face {
+	font-family: "Breathe Fire IV";
+	src:
+		local("Breathe Fire IV"),
+		url("public/font/Breathe Fire IV.otf") format("otf");
+}
+
+@font-face {
+	font-family: Bardolatry;
+	src:
+		local(Bardolatry),
+		url("public/font/Bardolatry.otf") format("otf");
+}
+
 :root {
 	--font-family: Lusitana, Garamond, serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
