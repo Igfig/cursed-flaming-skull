@@ -13,18 +13,18 @@
 	--theme-color-black: #0c0709;
 	--theme-color-blacker: black;
 
-	--background-color: var(--theme-color-lightest);
+	--background-color: var(--theme-color-darkest);
 
-	--text-color: var(--theme-color-darker);
-	--text-color-link: var(--theme-color-darkest);
-	--text-color-link-hover: var(--theme-color-black);
-	--text-color-link-active: var(--theme-color-blacker);
+	--text-color: var(--theme-color-lighter);
+	--text-color-link: var(--theme-color-lightest);
+	--text-color-link-hover: var(--theme-color-white);
+	--text-color-link-active: var(--theme-color-whiter);
 	--text-color-link-visited: var(--text-color-link);
 
-	--heading-color: var(--theme-color-darkest); // one shade lighter than text
-	--heading-color-link: var(--theme-color-darkest);
-	--heading-color-link-hover: var(--theme-color-black);
-	--heading-color-link-active: var(--theme-color-blacker);
+	--heading-color: var(--theme-color-lightest); // one shade darker than text
+	--heading-color-link: var(--theme-color-lightest);
+	--heading-color-link-hover: var(--theme-color-white);
+	--heading-color-link-active: var(--theme-color-whiter);
 	--heading-color-link-visited: var(--heading-color-link);
 
 	--title-color: #d10000;
@@ -32,7 +32,7 @@
 	--title-outline-color: var(--theme-color-whiter);
 	--title-hover-outline-color: white;
 
-	--divider-color: var(--theme-color-dark);
+	--divider-color: var(--theme-color-light);
 	--divider: 3px double var(--divider-color);
 
 	--spacing-vertical: calc(2.3cqw + 1rem);
@@ -41,22 +41,22 @@
 	--syntax-tab-size: 2;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
-		--background-color: var(--theme-color-darkest);
+		--background-color: var(--theme-color-lightest);
 
-		--text-color: var(--theme-color-lighter);
-		--text-color-link: var(--theme-color-lightest);
-		--text-color-link-hover: var(--theme-color-white);
-		--text-color-link-active: var(--theme-color-whiter);
+		--text-color: var(--theme-color-darker);
+		--text-color-link: var(--theme-color-darkest);
+		--text-color-link-hover: var(--theme-color-black);
+		--text-color-link-active: var(--theme-color-blacker);
 		--text-color-link-visited: var(--text-color-link);
 
-		--heading-color: var(--theme-color-lightest); // one shade darker than text
-		--heading-color-link: var(--theme-color-lightest);
-		--heading-color-link-hover: var(--theme-color-white);
-		--heading-color-link-active: var(--theme-color-whiter);
+		--heading-color: var(--theme-color-darkest); // one shade lighter than text
+		--heading-color-link: var(--theme-color-darkest);
+		--heading-color-link-hover: var(--theme-color-black);
+		--heading-color-link-active: var(--theme-color-blacker);
 		--heading-color-link-visited: var(--heading-color-link);
 
-		--divider-color: var(--theme-color-light);
+		--divider-color: var(--theme-color-dark);
 	}
 }
